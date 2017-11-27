@@ -19,7 +19,7 @@ import java.util.Properties;
 @Configuration
 @EnableTransactionManagement
 @EnableJpaRepositories("dao")
-@PropertySource({"classpath:persistence-postgresql.properties"})
+@PropertySource({"classpath:postgresql.properties"})
 
 public class DataConfig {
     @Autowired

@@ -13,7 +13,7 @@ public class Auction {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long auction_id;
     @Column(name = "TIMEOFSTART")
     private Date timeOfStart;
     @Column(name = "TIMEOFEND")
@@ -46,11 +46,11 @@ public class Auction {
 
 
     public Long getId() {
-        return id;
+        return auction_id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.auction_id = id;
     }
 
     public Date getTimeOfStart() {
@@ -92,7 +92,7 @@ public class Auction {
 
         Auction auction = (Auction) o;
 
-        if (id != null ? !id.equals(auction.id) : auction.id != null) return false;
+        if (auction != null ? !auction.equals(auction.auction_id) : auction.auction_id != null) return false;
         if (timeOfStart != null ? !timeOfStart.equals(auction.timeOfStart) : auction.timeOfStart != null) return false;
         if (timeOfEnd != null ? !timeOfEnd.equals(auction.timeOfEnd) : auction.timeOfEnd != null) return false;
         if (state != null ? !state.equals(auction.state) : auction.state != null) return false;
@@ -101,7 +101,7 @@ public class Auction {
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
+        int result = auction_id != null ? auction_id.hashCode() : 0;
         result = 31 * result + (timeOfStart != null ? timeOfStart.hashCode() : 0);
         result = 31 * result + (timeOfEnd != null ? timeOfEnd.hashCode() : 0);
         result = 31 * result + (state != null ? state.hashCode() : 0);

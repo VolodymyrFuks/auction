@@ -11,7 +11,7 @@ public class Main {
 
 
         UserDao user=context.getBean(UserDao.class);
-        System.out.println(user.findAll());
+        //System.out.println(user.findAll());
 
 
     }

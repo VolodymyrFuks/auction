@@ -7,7 +7,7 @@ import javax.persistence.*;
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType. IDENTITY)
-    private Long id;
+    private Long user_id;
     @Column(name = "USERNAME")
     private String userName;
     @Column(name = "PASSWORD")
@@ -24,11 +24,11 @@ public class User {
     }
 
     public Long getId() {
-        return id;
+        return user_id;
     }
 
     public void setId(Long id) {
-        this.id = id;
+        this.user_id = id;
     }
 
     public String getUserName() {
@@ -78,7 +78,7 @@ public class User {
 
         User user = (User) o;
 
-        if (id != null ? !id.equals(user.id) : user.id != null) return false;
+        if (user_id != null ? !user_id.equals(user.user_id) : user.user_id != null) return false;
         if (userName != null ? !userName.equals(user.userName) : user.userName != null) return false;
         if (password != null ? !password.equals(user.password) : user.password != null) return false;
         if (eMail != null ? !eMail.equals(user.eMail) : user.eMail != null) return false;
@@ -88,7 +88,7 @@ public class User {
 
     @Override
     public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
+        int result = user_id != null ? user_id.hashCode() : 0;
         result = 31 * result + (userName != null ? userName.hashCode() : 0);
         result = 31 * result + (password != null ? password.hashCode() : 0);
         result = 31 * result + (eMail != null ? eMail.hashCode() : 0);
