@@ -12,6 +12,8 @@ public class Main {
 
         UserDao user=context.getBean(UserDao.class);
         //System.out.println(user.findAll());
+        User test = new User("vf","1234","vf@gmail","vova","fuks");
+        user.save(test);
 
 
     }
